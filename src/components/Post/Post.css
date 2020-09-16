@@ -1,0 +1,61 @@
+.Post {
+  border-radius: 3px;
+  border: 1px solid #e6e6e6;
+  background-color: #fff;
+  margin: 0 auto;
+  margin-bottom: 25px;
+  width: 50%;
+}
+
+.user-details {
+  display: flex;
+  padding: 16px;
+  align-items: center;
+}
+
+.user-avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.username {
+  margin-left: 12px;
+  font-family: 'PT Sans', sans-serif;
+  font-weight: bold;
+}
+
+.post-image {
+  background-color: #efefef;
+  display: block;
+  width: 100%;
+}
+
+.caption {
+  padding: 14px 4px;
+}
+
+.container {
+  margin-top: 75px;
+}
+
+.comment {
+  border: none;
+  width: 80%;
+  border-top: hey 14.3px;
+  font-size: 15px;
+  padding: 19px 15px;
+  outline: none;
+}
+
+.comment-button-active {
+  color: rgb(4, 139, 230);
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.comment-button-inActive {
+  color: rgb(153, 196, 224);
+  font-weight: 700;
+  cursor: none;
+}
