@@ -1,16 +1,19 @@
 import React from 'react';
-import logo from './instagram.png';
+import { NavLink } from 'react-router-dom';
+import Home from '../../icons/HomeInActive.svg';
+import NewPost from '../../icons/NewPostInActive.svg';
 import './Menubar.css';
 
-const Menubar = () => {
+const MenuBar = () => {
   return (
-    <nav className="Nav">
-      <div className="menus">
-        <a href="/">
-          <img src={logo} className="logo" alt="Instagram" />
-        </a>
-      </div>
-    </nav>
+    <div>
+      <NavLink to="/" activeClassName="active-home" exact>
+        <img src={Home} />
+      </NavLink>
+      <NavLink to="/newPost" activeClassName="active-newPost" exact>
+        <img src={NewPost} />
+      </NavLink>
+    </div>
   );
 };
-export default Menubar;
+export default MenuBar;

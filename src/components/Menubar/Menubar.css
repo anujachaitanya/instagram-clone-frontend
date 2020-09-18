@@ -11,6 +11,7 @@ Nav {
 .menus {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
   height: 53px;
   width: 70%;
   margin: 0 auto;
@@ -20,4 +21,12 @@ Nav {
 .logo {
   height: 35px;
   width: 135px;
+}
+
+.active-home {
+  content: url('../../icons/HomeActive.svg');
+}
+
+.active-newPost {
+  content: url('../../icons/NewPostActive.svg');
 }

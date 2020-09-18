@@ -1,13 +1,14 @@
 import React from 'react';
-import Menubar from './components/Menubar/Menubar';
-import Posts from './components/Posts';
+import Header from './components/Menubar/Header';
+import Routes from './routes/Routes';
+import { BrowserRouter } from 'react-router-dom';
 
 function App() {
   return (
-    <div className="App">
-      <Menubar />
-      <Posts />
-    </div>
+    <BrowserRouter>
+      <Header />
+      <Routes />
+    </BrowserRouter>
   );
 }
 
