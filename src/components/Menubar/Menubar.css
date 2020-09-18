@@ -23,6 +23,10 @@ Nav {
   width: 135px;
 }
 
+.action {
+  margin-right: 30px;
+}
+
 .active-home {
   content: url('../../icons/HomeActive.svg');
 }

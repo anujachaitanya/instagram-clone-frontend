@@ -7,10 +7,15 @@ import './Menubar.css';
 const MenuBar = () => {
   return (
     <div>
-      <NavLink to="/" activeClassName="active-home" exact>
+      <NavLink to="/" activeClassName="active-home" className="action" exact>
         <img src={Home} />
       </NavLink>
-      <NavLink to="/newPost" activeClassName="active-newPost" exact>
+      <NavLink
+        to="/newPost"
+        activeClassName="active-newPost"
+        className="action"
+        exact
+      >
         <img src={NewPost} />
       </NavLink>
     </div>
