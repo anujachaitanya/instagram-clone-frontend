@@ -12,15 +12,13 @@ function App() {
     instaApi.isLoggedIn().then(({ isLoggedIn }) => setLogin(isLoggedIn));
   });
 
-  if (isLoggedIn) {
-    return (
-      <BrowserRouter>
-        <Header />
-        <Routes />
-      </BrowserRouter>
-    );
-  }
-  return <Login />;
+  const container = isLoggedIn ? <Routes /> : <Login />;
+  return (
+    <BrowserRouter>
+      <Header isLoggedIn={isLoggedIn} />
+      {container}
+    </BrowserRouter>
+  );
 }
 
 export default App;

@@ -4,11 +4,12 @@ import MenuBar from './Menubar';
 import './Menubar.css';
 
 const Header = (props) => {
+  const menubar = props.isLoggedIn ? <MenuBar /> : '';
   return (
     <nav className="Nav">
       <div className="menus">
         <Logo />
-        <MenuBar />
+        {menubar}
       </div>
     </nav>
   );
