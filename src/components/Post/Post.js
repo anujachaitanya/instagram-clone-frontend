@@ -1,6 +1,6 @@
 import React from 'react';
 import Comment from './Comment';
-import './Post.css';
+import '../../styles/Post.css';
 
 const Post = () => {
   return (

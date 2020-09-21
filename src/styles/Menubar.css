@@ -28,9 +28,9 @@ Nav {
 }
 
 .active-home {
-  content: url('../../icons/HomeActive.svg');
+  content: url('../icons/HomeActive.svg');
 }
 
 .active-newPost {
-  content: url('../../icons/NewPostActive.svg');
+  content: url('../icons/NewPostActive.svg');
 }

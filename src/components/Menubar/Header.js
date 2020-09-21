@@ -1,7 +1,7 @@
 import React from 'react';
 import Logo from './Logo';
 import MenuBar from './Menubar';
-import './Menubar.css';
+import '../../styles/Menubar.css';
 
 const Header = (props) => {
   const menubar = props.isLoggedIn ? <MenuBar /> : '';

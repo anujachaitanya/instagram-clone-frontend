@@ -1,6 +1,6 @@
 import React from 'react';
 import logo from '../../icons/instagram.png';
-import './Menubar.css';
+import '../../styles/Menubar.css';
 
 const Logo = () => {
   return (

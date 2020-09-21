@@ -2,7 +2,7 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import Home from '../../icons/HomeInActive.svg';
 import NewPost from '../../icons/NewPostInActive.svg';
-import './Menubar.css';
+import '../../styles/Menubar.css';
 
 const MenuBar = () => {
   return (
