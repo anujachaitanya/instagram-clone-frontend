@@ -1,0 +1,24 @@
+.log-in {
+  margin-top: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tag-line {
+  font-size: 45px;
+}
+
+.sign-in {
+  margin-top: 23px;
+  background: #2196f3;
+  text-align: center;
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 6px;
+  border-radius: 3px;
+  font-size: 15px;
+  height: 22px;
+  width: fit-content;
+}

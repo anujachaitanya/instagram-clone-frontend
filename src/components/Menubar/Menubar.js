@@ -18,6 +18,7 @@ const MenuBar = () => {
       >
         <img src={NewPost} />
       </NavLink>
+      <button>log out</button>
     </div>
   );
 };
