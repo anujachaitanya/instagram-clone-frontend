@@ -1,6 +1,7 @@
 const instaApi = {};
 
-instaApi.isLoggedIn = () => fetch('/api').then((res) => res.json());
+instaApi.isLoggedIn = () => fetch('/api/isSignedIn').then((res) => res.json());
+
 instaApi.login = () =>
   fetch('/api/signIn')
     .then((res) => res.json())

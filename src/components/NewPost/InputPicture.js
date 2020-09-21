@@ -25,8 +25,10 @@ const InputPicture = () => {
 
   return (
     <form onSubmit={handleSubmit}>
-      <label>you can add file here </label>
-      <div style={{ content: file, width: '400px', height: '400px' }}></div>
+      <div style={{ content: file, width: '400px', height: '400px' }}>
+        <label htmlFor="file">you can add file here </label>
+      </div>
+
       <input type="file" name="file" onChange={onChange}></input>
       <input type="text" name="hey"></input>
       <button>submit</button>
