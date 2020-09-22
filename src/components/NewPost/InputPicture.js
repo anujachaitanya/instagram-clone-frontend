@@ -17,16 +17,20 @@ const InputPicture = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
     const data = new FormData(event.target);
-    fetch('/api/post', {
+    fetch('/api/user/post', {
       method: 'POST',
       body: data,
-    });
+    }).then(() => setFile(null));
   };
 
   return (
     <form onSubmit={handleSubmit} className="new-post">
       <div className="preview-content">
-        <label class="preview-image" style={{ content: file }} htmlFor="file">
+        <label
+          className="preview-image"
+          style={{ content: file }}
+          htmlFor="file"
+        >
           you can add file here
         </label>
         <div className="contents">
