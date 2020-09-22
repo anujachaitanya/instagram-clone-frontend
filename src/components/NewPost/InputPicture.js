@@ -43,7 +43,7 @@ const InputPicture = () => {
             type="text"
             name="caption"
           />
-          <button>submit</button>
+          <button className="post-button">submit</button>
         </div>
       </div>
     </form>
