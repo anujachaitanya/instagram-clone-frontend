@@ -18,7 +18,7 @@ const Post = () => {
         src="https://pbs.twimg.com/media/EZkbIHiWsAIr-Vx?format=jpg&name=medium"
         alt="hruta12 riding bicycle"
       />
-      <div className="caption">
+      <div className="post-caption">
         <span className="username">Hruta12</span> Being Ananya !!
       </div>
       <Comment />

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import '../../styles/NewPost.css';
 
 const InputPicture = () => {
   const [file, setFile] = useState(null);
@@ -16,7 +17,6 @@ const InputPicture = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
     const data = new FormData(event.target);
-    console.log(data);
     fetch('/api/post', {
       method: 'POST',
       body: data,
@@ -24,14 +24,28 @@ const InputPicture = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <div style={{ content: file, width: '400px', height: '400px' }}>
-        <label htmlFor="file">you can add file here </label>
+    <form onSubmit={handleSubmit} className="new-post">
+      <div className="preview-content">
+        <label class="preview-image" style={{ content: file }} htmlFor="file">
+          you can add file here
+        </label>
+        <div className="contents">
+          <input
+            type="file"
+            name="file"
+            id="file"
+            onChange={onChange}
+            required
+          />
+          <textarea
+            className="caption"
+            placeholder="Add your caption here"
+            type="text"
+            name="caption"
+          />
+          <button>submit</button>
+        </div>
       </div>
-
-      <input type="file" name="file" onChange={onChange}></input>
-      <input type="text" name="hey"></input>
-      <button>submit</button>
     </form>
   );
 };
