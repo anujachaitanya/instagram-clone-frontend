@@ -11,7 +11,7 @@ const Posts = (props) => {
   }, [props.category]);
 
   const posts = Object.keys(postsData)
-    .sort()
+    .sort((a, b) => a - b)
     .reverse()
     .map((key, index) => {
       const parsedPost = JSON.parse(postsData[key]);

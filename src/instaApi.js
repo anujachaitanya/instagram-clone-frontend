@@ -20,4 +20,6 @@ instaApi.getPosts = (category) => {
 instaApi.getUser = (id) =>
   fetch(`/api/user/getUser/${id}`).then((res) => res.json());
 
+instaApi.logout = () => fetch('/api/user/logout').then((res) => res.json());
+
 export default instaApi;

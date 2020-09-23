@@ -1,10 +1,18 @@
-import React from 'react';
-import { NavLink } from 'react-router-dom';
+import React, { useState } from 'react';
+import { NavLink, useHistory } from 'react-router-dom';
 import Home from '../../icons/HomeInActive.svg';
 import NewPost from '../../icons/NewPostInActive.svg';
+import Logout from '../../icons/Logout.svg';
+import instaApi from '../../instaApi';
 import '../../styles/Menubar.css';
 
-const MenuBar = (props) => {
+const Menus = (props) => {
+  const history = useHistory();
+  const logout = () => {
+    instaApi.logout().then(() => {
+      history.push('/');
+    });
+  };
   return (
     <div>
       <NavLink to="/" activeClassName="active-home" className="action" exact>
@@ -16,7 +24,7 @@ const MenuBar = (props) => {
         className="action"
         exact
       >
-        <img src={NewPost} />
+        <img src={NewPost} alt="new post " />
       </NavLink>
       <NavLink
         to={`/user/${props.user.id}`}
@@ -24,9 +32,10 @@ const MenuBar = (props) => {
         activeClassName="active-avatar"
         exact
       >
-        <img src={props.user.avatarUrl} className="avatar" />
+        <img src={props.user.avatarUrl} className="avatar" alt="user" />
       </NavLink>
+      <img src={Logout} onClick={logout} className="action" />
     </div>
   );
 };
-export default MenuBar;
+export default Menus;

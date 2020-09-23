@@ -30,6 +30,7 @@ Nav {
 
 .action {
   margin: 0px 0px 0px 25px;
+  cursor: pointer;
 }
 
 .active-home {
