@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { NavLink, useHistory } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import Home from '../../icons/HomeInActive.svg';
 import NewPost from '../../icons/NewPostInActive.svg';
 import Logout from '../../icons/Logout.svg';
@@ -7,11 +7,8 @@ import instaApi from '../../instaApi';
 import '../../styles/Menubar.css';
 
 const Menus = (props) => {
-  const history = useHistory();
   const logout = () => {
-    instaApi.logout().then(() => {
-      history.push('/');
-    });
+    instaApi.logout().then(() => props.setUser(null));
   };
   return (
     <div>
@@ -34,7 +31,9 @@ const Menus = (props) => {
       >
         <img src={props.user.avatarUrl} className="avatar" alt="user" />
       </NavLink>
-      <img src={Logout} onClick={logout} className="action" />
+      <NavLink to="/" className="action" activeClassName="active-avatar" exact>
+        <img src={Logout} onClick={logout} className="action" />
+      </NavLink>
     </div>
   );
 };

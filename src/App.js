@@ -16,7 +16,7 @@ function App() {
   const container = user ? <Routes user={user} /> : <Login />;
   return (
     <BrowserRouter>
-      <Header user={user} />
+      <Header user={user} setUser={setUser} />
       {container}
     </BrowserRouter>
   );
