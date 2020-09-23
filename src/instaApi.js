@@ -8,4 +8,6 @@ instaApi.login = () =>
     .then(({ href }) => {
       window.location.href = href;
     });
+
+instaApi.getPosts = () => fetch('/api/user/getPosts').then((res) => res.json());
 export default instaApi;

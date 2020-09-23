@@ -4,7 +4,11 @@ import MenuBar from './Menubar';
 import '../../styles/Menubar.css';
 
 const Header = (props) => {
-  const menubar = props.isLoggedIn ? <MenuBar /> : '';
+  const menubar = props.user ? (
+    <MenuBar avatarUrl={props.user.avatarUrl} />
+  ) : (
+    ''
+  );
   return (
     <nav className="Nav">
       <div className="menus">

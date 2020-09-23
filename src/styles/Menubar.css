@@ -23,8 +23,13 @@ Nav {
   width: 135px;
 }
 
+.action-div {
+  width: 28px;
+  height: 28px;
+}
+
 .action {
-  margin-right: 30px;
+  margin: 0px 0px 0px 25px;
 }
 
 .active-home {
@@ -33,4 +38,15 @@ Nav {
 
 .active-newPost {
   content: url('../icons/NewPostActive.svg');
+}
+
+.avatar {
+  width: 23px;
+  height: 23px;
+  border-radius: 50%;
+  position: relative;
+}
+
+.active-avatar > .avatar {
+  border: 1px solid rgba(var(--i1d, 38, 38, 38), 1);
 }

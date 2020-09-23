@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
+import { useHistory } from 'react-router-dom';
 import '../../styles/NewPost.css';
 
 const InputPicture = () => {
   const [file, setFile] = useState(null);
+  const history = useHistory();
+
   const onChange = (event) => {
     const [image] = event.target.files;
     const reader = new FileReader();
@@ -20,7 +23,7 @@ const InputPicture = () => {
     fetch('/api/user/post', {
       method: 'POST',
       body: data,
-    }).then(() => setFile(null));
+    }).then(() => history.push('/'));
   };
 
   return (

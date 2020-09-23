@@ -2,24 +2,17 @@ import React from 'react';
 import Comment from './Comment';
 import '../../styles/Post.css';
 
-const Post = () => {
+const Post = (props) => {
+  const { caption, path, user } = props.details;
   return (
     <div className="Post">
       <div className="user-details">
-        <img
-          className="user-avatar"
-          src="https://pbs.twimg.com/media/EKItK1CU4AIG-sY?format=jpg&name=medium"
-          alt="hruta12"
-        />
-        <span className="username">Hruta12</span>
+        <img className="user-avatar" src={user.avatarUrl} alt={user.username} />
+        <span className="username">{user.username}</span>
       </div>
-      <img
-        className="post-image"
-        src="https://pbs.twimg.com/media/EZkbIHiWsAIr-Vx?format=jpg&name=medium"
-        alt="hruta12 riding bicycle"
-      />
+      <img className="post-image" src={path} alt="image" />
       <div className="post-caption">
-        <span className="username">Hruta12</span> Being Ananya !!
+        <span className="username">{user.username}</span> {caption}
       </div>
       <Comment />
     </div>

@@ -20,13 +20,12 @@ const MenuBar = (props) => {
       </NavLink>
       <NavLink
         to="/user"
-        activeClassName="active-newPost"
         className="action"
+        activeClassName="active-avatar"
         exact
       >
-        user
+        <img src={props.avatarUrl} className="avatar" />
       </NavLink>
-      <button>log out</button>
     </div>
   );
 };
