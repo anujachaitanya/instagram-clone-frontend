@@ -9,5 +9,16 @@ instaApi.login = () =>
       window.location.href = href;
     });
 
-instaApi.getPosts = () => fetch('/api/user/getPosts').then((res) => res.json());
+instaApi.getPosts = (category) => {
+  console.log(category);
+  const url =
+    category === 'all'
+      ? '/api/user/getPosts'
+      : `/api/user/getUsersPosts/${category}`;
+  return fetch(url).then((res) => res.json());
+};
+
+instaApi.getUser = (id) =>
+  fetch(`/api/user/getUser/${id}`).then((res) => res.json());
+
 export default instaApi;

@@ -13,7 +13,7 @@ function App() {
     instaApi.isLoggedIn().then(({ user }) => setUser(user));
   }, []);
 
-  const container = user ? <Routes /> : <Login />;
+  const container = user ? <Routes user={user} /> : <Login />;
   return (
     <BrowserRouter>
       <Header user={user} />

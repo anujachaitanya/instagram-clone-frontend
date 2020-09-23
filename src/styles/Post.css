@@ -4,7 +4,6 @@
   background-color: #fff;
   margin: 0 auto;
   margin-bottom: 25px;
-  width: 50%;
 }
 
 .user-details {
@@ -36,6 +35,8 @@
 }
 
 .container {
+  width: 50%;
+  margin: 0 auto;
   margin-top: 75px;
 }
 
