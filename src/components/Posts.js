@@ -8,13 +8,15 @@ const Posts = (props) => {
   const [postsData, setPosts] = useState([]);
   useEffect(() => {
     instaApi.getPosts(props.category).then(setPosts);
-    console.log(postsData);
   }, [props.category]);
 
-  const posts = _.orderBy(postsData, null, 'desc').map((post, index) => {
-    const parsedPost = JSON.parse(post);
-    return <Post details={parsedPost} key={index} />;
-  });
+  const posts = Object.keys(postsData)
+    .sort()
+    .reverse()
+    .map((key, index) => {
+      const parsedPost = JSON.parse(postsData[key]);
+      return <Post details={parsedPost} key={index} />;
+    });
 
   return <div className={props.class}>{posts}</div>;
 };

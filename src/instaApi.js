@@ -10,7 +10,6 @@ instaApi.login = () =>
     });
 
 instaApi.getPosts = (category) => {
-  console.log(category);
   const url =
     category === 'all'
       ? '/api/user/getPosts'

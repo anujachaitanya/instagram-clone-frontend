@@ -60,3 +60,9 @@
   font-weight: 700;
   cursor: none;
 }
+
+.link-text {
+  text-decoration: none;
+  cursor: pointer;
+  color: black;
+}

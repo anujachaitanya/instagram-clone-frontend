@@ -9,7 +9,7 @@ const Post = (props) => {
     <div className="Post">
       <div className="user-details">
         <img className="user-avatar" src={user.avatarUrl} alt={user.username} />
-        <Link to={`/user/${user.id}`}>
+        <Link to={`/user/${user.id}`} className="link-text">
           <span className="username">{user.username}</span>{' '}
         </Link>
       </div>

@@ -11,7 +11,6 @@ const UserProfile = () => {
     instaApi.getUser(id).then(setUserDetails);
   }, [id]);
   const { avatarUrl, username } = userDetails;
-  console.log(avatarUrl, username, userDetails);
   return (
     <div>
       <div className="user-profile">
