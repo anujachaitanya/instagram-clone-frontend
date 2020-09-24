@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
+import UserContext from './UserContext';
 import instaApi from './instaApi';
 import Header from './components/Menubar/Header';
 import Routes from './routes/Routes';
@@ -13,11 +14,13 @@ function App() {
     instaApi.isLoggedIn().then(({ user }) => setUser(user));
   }, []);
 
-  const container = user ? <Routes user={user} /> : <Login />;
+  const container = user ? <Routes /> : <Login />;
   return (
     <BrowserRouter>
-      <Header user={user} setUser={setUser} />
-      {container}
+      <UserContext.Provider value={user}>
+        <Header setUser={setUser} />
+        {container}
+      </UserContext.Provider>
     </BrowserRouter>
   );
 }

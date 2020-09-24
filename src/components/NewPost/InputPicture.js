@@ -34,7 +34,9 @@ const InputPicture = () => {
           style={{ content: file }}
           htmlFor="file"
         >
-          you can add file here
+          <i className="fa fa-picture-o" aria-hidden="true"></i>
+
+          <div> Click here to add image</div>
         </label>
         <div className="contents">
           <input

@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import Post from './Post/Post';
 import instaApi from '../instaApi';
-import _ from 'lodash';
 import '../styles/Post.css';
 
 const Posts = (props) => {
   const [postsData, setPosts] = useState([]);
   useEffect(() => {
-    instaApi.getPosts(props.category).then(setPosts);
+    instaApi
+      .getPosts(props.category)
+      .then((postsData) => setPosts(postsData || []));
   }, [props.category]);
 
   const posts = Object.keys(postsData)
@@ -15,7 +16,7 @@ const Posts = (props) => {
     .reverse()
     .map((key, index) => {
       const parsedPost = JSON.parse(postsData[key]);
-      return <Post details={parsedPost} key={index} />;
+      return <Post details={parsedPost} key={index} id={key} />;
     });
 
   return <div className={props.class}>{posts}</div>;

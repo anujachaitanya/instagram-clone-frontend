@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import instaApi from '../../instaApi';
 import CommentButton from './CommentButton';
 
 const Comment = (props) => {
@@ -9,6 +10,11 @@ const Comment = (props) => {
     setInput(input);
     input.trim() ? setActive(true) : setActive(false);
   };
+
+  const comment = function () {
+    instaApi.addComment(input, props.postId).then(() => setInput(''));
+  };
+
   return (
     <div>
       <input
@@ -17,7 +23,7 @@ const Comment = (props) => {
         value={input}
         onChange={(e) => handleChange(e.target.value)}
       />
-      <CommentButton isActive={isActive} />
+      <CommentButton isActive={isActive} onClick={comment} />
     </div>
   );
 };

@@ -17,9 +17,20 @@ instaApi.getPosts = (category) => {
   return fetch(url).then((res) => res.json());
 };
 
+instaApi.addComment = (comment, postId) => {
+  console.log(comment, postId);
+  return fetch('/api/user/addComment', {
+    method: 'POST',
+    body: JSON.stringify({ postId, comment }),
+    headers: { 'Content-Type': 'application/json' },
+  });
+};
+
 instaApi.getUser = (id) =>
   fetch(`/api/user/getUser/${id}`).then((res) => res.json());
 
 instaApi.logout = () => fetch('/api/user/logout').then((res) => res.json());
+
+instaApi.toggleLike = (postId) => fetch(`/api/user/toggleLike/${postId}`);
 
 export default instaApi;

@@ -4,6 +4,8 @@
   background-color: #fff;
   margin: 0 auto;
   margin-bottom: 25px;
+  display: flex;
+  flex-direction: column;
 }
 
 .user-details {
@@ -26,8 +28,8 @@
 
 .post-image {
   background-color: #efefef;
-  display: block;
   width: 100%;
+  border-radius: 3px;
 }
 
 .post-caption {
@@ -65,4 +67,23 @@
   text-decoration: none;
   cursor: pointer;
   color: black;
+}
+
+.Post > * {
+  width: 95%;
+  margin: 0 auto;
+}
+
+.not-liked {
+  fill: white;
+  stroke: black;
+  stroke-width: 2px;
+  width: 25px;
+  height: 24px;
+}
+
+.liked {
+  fill: red;
+  width: 25px;
+  height: 24px;
 }
