@@ -58,16 +58,20 @@
 }
 
 .button-active {
-  margin-top: 11px;
+  border: none;
+  background-color: white;
   color: rgb(4, 139, 230);
   font-weight: 700;
+  font-size: 15px;
   cursor: pointer;
 }
 
 .button-inActive {
-  margin-top: 11px;
+  border: none;
+  background-color: white;
   color: rgb(153, 196, 224);
   font-weight: 700;
+  font-size: 15px;
   cursor: none;
 }
 
@@ -91,11 +95,16 @@
   height: 24px;
 }
 
+.likes {
+  font-size: 12px;
+  font-weight: 600;
+}
+
 .actions {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  padding: 5px 12px;
+  padding: 5px 12px 0px;
 }
 
 .comment-icon {

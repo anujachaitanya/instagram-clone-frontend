@@ -52,7 +52,9 @@ const InputPicture = () => {
             type="text"
             name="caption"
           />
-          <button className="post-button">Post</button>
+          <button className={file ? 'button-active' : 'button-inActive'}>
+            Post
+          </button>
         </div>
       </div>
     </form>
