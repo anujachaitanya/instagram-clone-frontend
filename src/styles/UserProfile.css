@@ -3,7 +3,7 @@
   flex-direction: row;
   margin: 100px auto auto;
   width: 50%;
-  justify-content: space-around;
+  justify-content: flex-start;
   padding-bottom: 45px;
   border-bottom: solid 0.5px #c2bfbf;
 }
@@ -19,6 +19,7 @@
   font-weight: 550;
   outline: none;
   border: none;
+  margin: 36px 0px;
 }
 
 .profile-picture {
@@ -26,6 +27,7 @@
   height: 120px;
   border-radius: 50%;
   position: relative;
+  margin: 0px 51px 0px 81px;
 }
 
 .user-posts {
