@@ -1,0 +1,36 @@
+.page {
+  width: 75%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  margin-top: 6rem;
+  border: 1px solid #e6e6e6;
+  background-color: white;
+}
+
+.post-details {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  justify-content: space-between;
+}
+
+.image-div {
+  width: 80%;
+}
+
+.caption-details {
+  margin: 13px 13px 0px;
+}
+
+.comments-section {
+  border-top: 1px solid #e6e6e6;
+}
+
+.allComments {
+  height: 70%;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  overflow: scroll;
+}

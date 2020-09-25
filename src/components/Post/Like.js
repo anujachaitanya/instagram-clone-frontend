@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 
 const Like = (props) => {
+  console.log(props);
   const [isLiked, setLike] = useState(props.isLiked);
 
   const like = function (e) {
+    console.log(isLiked);
     setLike(!isLiked);
     props.toggleLike();
   };

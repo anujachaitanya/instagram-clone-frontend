@@ -1,5 +1,6 @@
-import React, { useContext, useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useContext } from 'react';
+import Comments from '../../icons/Comments.svg';
+import { Link, useHistory } from 'react-router-dom';
 import Comment from './Comment';
 import Like from './Like';
 import instaApi from '../../instaApi';
@@ -8,8 +9,16 @@ import UserContext from '../../UserContext';
 
 const Post = (props) => {
   const currentUser = useContext(UserContext);
+  const history = useHistory();
 
   const { caption, path, user, likes, postId } = props.details;
+
+  const comment = function (input) {
+    instaApi.addComment(input, postId).then(() => {
+      console.log('added comments');
+      history.push(`/post/${postId}`);
+    });
+  };
   const toggleLike = function () {
     instaApi.toggleLike(postId);
   };
@@ -25,17 +34,26 @@ const Post = (props) => {
       <div>
         <img className="post-image" src={path} alt="image" />
       </div>
-      <div>
+      <div className="actions">
         <Like
           isLiked={likes.includes(currentUser.id)}
           toggleLike={toggleLike}
         />
+        <Link to={`/post/${postId}`}>
+          <img className="comment-icon" src={Comments} />
+        </Link>
       </div>
       <div className="post-caption">
         <span className="username">{user.username}</span> {caption}
       </div>
-      <Comment postId={postId} />
+      <Comment onClick={comment} />
     </div>
   );
+};
+
+Post.defaultProps = {
+  details: {
+    likes: [],
+  },
 };
 export default Post;

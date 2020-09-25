@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import instaApi from '../../instaApi';
 import CommentButton from './CommentButton';
 
 const Comment = (props) => {
@@ -12,11 +11,14 @@ const Comment = (props) => {
   };
 
   const comment = function () {
-    instaApi.addComment(input, props.postId).then(() => setInput(''));
+    if (input.trim()) {
+      setInput('');
+      props.onClick(input);
+    }
   };
 
   return (
-    <div>
+    <div className="comment-box">
       <input
         className="comment"
         placeholder="Add a comment"

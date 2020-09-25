@@ -17,13 +17,15 @@
 .user-avatar {
   width: 30px;
   height: 30px;
+  margin-right: 12px;
+
   border-radius: 50%;
 }
 
 .username {
-  margin-left: 12px;
   font-family: 'PT Sans', sans-serif;
   font-weight: bold;
+  margin-right: 7px;
 }
 
 .post-image {
@@ -33,7 +35,7 @@
 }
 
 .post-caption {
-  padding: 14px 4px;
+  padding: 0px 0px 10px;
 }
 
 .container {
@@ -45,19 +47,25 @@
 .comment {
   border: none;
   width: 80%;
-  border-top: hey 14.3px;
   font-size: 15px;
-  padding: 19px 15px;
+  padding: 9px 36px 19px 0px;
   outline: none;
 }
+.comment-box {
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 12px;
+}
 
-.comment-button-active {
+.button-active {
+  margin-top: 11px;
   color: rgb(4, 139, 230);
   font-weight: 700;
   cursor: pointer;
 }
 
-.comment-button-inActive {
+.button-inActive {
+  margin-top: 11px;
   color: rgb(153, 196, 224);
   font-weight: 700;
   cursor: none;
@@ -69,15 +77,10 @@
   color: black;
 }
 
-.Post > * {
-  width: 95%;
-  margin: 0 auto;
-}
-
 .not-liked {
   fill: white;
   stroke: black;
-  stroke-width: 2px;
+  stroke-width: 3px;
   width: 25px;
   height: 24px;
 }
@@ -86,4 +89,20 @@
   fill: red;
   width: 25px;
   height: 24px;
+}
+
+.actions {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  padding: 5px 12px;
+}
+
+.comment-icon {
+  margin-left: 10px;
+}
+
+.Post > * {
+  width: 95%;
+  margin: 0 auto;
 }

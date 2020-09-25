@@ -1,6 +1,7 @@
 import React from 'react';
 import { Switch, Route, Redirect } from 'react-router-dom';
 import Posts from '../components/Posts';
+import PostPage from '../components/Post/PostPage';
 import InputPicture from '../components/NewPost/InputPicture';
 import Login from '../components/Login/Login';
 import UserProfile from '../components/UserProfile/Profile';
@@ -12,9 +13,7 @@ const Routes = () => {
       <Route path="/newPost" component={InputPicture} exact />
       <Route path="/user/:id" component={UserProfile} />
       <Route path="/login" component={Login} />
-      <Route path="/logout">
-        <Redirect to="/"></Redirect>
-      </Route>
+      <Route path="/post/:id" component={PostPage} />
     </Switch>
   );
 };

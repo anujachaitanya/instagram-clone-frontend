@@ -33,4 +33,7 @@ instaApi.logout = () => fetch('/api/user/logout').then((res) => res.json());
 
 instaApi.toggleLike = (postId) => fetch(`/api/user/toggleLike/${postId}`);
 
+instaApi.getPost = (id) =>
+  fetch(`/api/user/getPost/${id}`).then((res) => res.json());
+
 export default instaApi;
