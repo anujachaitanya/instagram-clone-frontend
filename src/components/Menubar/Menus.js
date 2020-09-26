@@ -17,7 +17,7 @@ const Menus = (props) => {
   return (
     <div>
       <NavLink to="/" activeClassName="active-home" className="action" exact>
-        <img src={Home} />
+        <img src={Home} alt="" />
       </NavLink>
       <NavLink
         to="/newPost"
@@ -35,7 +35,7 @@ const Menus = (props) => {
       >
         <img src={user.avatarUrl} className="avatar" alt="user" />
       </NavLink>
-      <img src={Logout} onClick={logout} className="action" />
+      <img src={Logout} onClick={logout} className="action" alt="" />
     </div>
   );
 };

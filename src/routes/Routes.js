@@ -1,5 +1,5 @@
 import React from 'react';
-import { Switch, Route, Redirect } from 'react-router-dom';
+import { Switch, Route } from 'react-router-dom';
 import Posts from '../components/Posts';
 import PostPage from '../components/Post/PostPage';
 import InputPicture from '../components/NewPost/InputPicture';

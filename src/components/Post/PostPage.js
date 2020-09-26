@@ -27,7 +27,7 @@ const PostPage = () => {
   return (
     <div className="page">
       <div className="image-div">
-        <img className="post-image" src={post.path} alt="image" />
+        <img className="post-image" src={post.path} alt="" />
       </div>
 
       <div className="post-details">

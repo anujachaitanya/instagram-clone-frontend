@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useContext, useState } from 'react';
 import Comments from '../../icons/Comments.svg';
 import { Link, useHistory } from 'react-router-dom';
 import Comment from './Comment';
@@ -32,7 +32,7 @@ const Post = (props) => {
         </Link>
       </div>
       <div>
-        <img className="post-image" src={path} alt="image" />
+        <img className="post-image" src={path} alt="" />
       </div>
       <div className="actions">
         <Like

@@ -1,0 +1,22 @@
+.post-container {
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+
+.preview-post {
+  width: 30%;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 11px;
+}
+
+.image {
+  width: 100%;
+  border-radius: 5px;
+}
